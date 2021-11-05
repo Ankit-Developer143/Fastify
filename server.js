@@ -1,9 +1,10 @@
 const fastify = require("fastify")({ logger: true });
 const PORT = 5000;
 //register fastify routes 
-fastify.register(require('./routes/simpleRouting'))
-//fastify.register(require('./routes/itemHandlerExample'));
-//fastify.register(require('./routes/itemSimpleValidation'));
+//fastify.register(require('./routes/simpleRouting'))
+//fastify.register(require('./routes/itemValidationandHandler'));
+//fastify.register(require('./routes/simpleValidation'));
+fastify.register(require('./routes/withController'))
 
 
 const start = async () => {
