@@ -1,4 +1,7 @@
 const fastify = require("fastify")({ logger: true });
+const dotenv = require("dotenv");
+dotenv.config();
+const connection = require('./connection/db')
 fastify.register(require('fastify-swagger'),{
     exposeRoute:true,
     routePrefix:'/docs',
@@ -7,13 +10,14 @@ fastify.register(require('fastify-swagger'),{
     }
 })
 
+
+
 // for Swagger
 //http://127.0.0.1:5000/docs/static/index.html#/
 
 const PORT = 5000;
 //register fastify routes 
 //fastify.register(require('./routes/simpleRouting'))
-//fastify.register(require('./routes/itemValidationandHandler'));
 //fastify.register(require('./routes/simpleValidation'));
 fastify.register(require('./routes/withController'))
 

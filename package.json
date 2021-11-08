@@ -4,8 +4,12 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "fastify": "^3.23.0",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.23.1",
+    "fastify-mongodb": "^4.1.1",
     "fastify-swagger": "^4.12.6",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -13,7 +17,7 @@
   },
   "scripts": {
     "start": "node server",
-    "dev":"nodemon server"
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
